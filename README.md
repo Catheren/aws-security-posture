@@ -1,7 +1,7 @@
-# AWS Cloud Security Engineering
+# AWS Cloud Security Posture
 
 A hands-on multi-account AWS security project demonstrating the architecture,
-tooling, and judgment expected of an intermediate cloud security engineer.
+tooling, and judgment.
 
 Built on AWS across three workload accounts (security, prod, dev) under a
 single AWS Organization. Every decision here — what to enable, where to run
