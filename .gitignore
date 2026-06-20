@@ -1,0 +1,22 @@
+# Terraform
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+
+# Lambda build artifacts
+*.zip
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Sensitive values — never commit real account IDs or credentials
+terraform.tfvars
+*.auto.tfvars
+
+# OS / editor
+.DS_Store
+.vscode/
