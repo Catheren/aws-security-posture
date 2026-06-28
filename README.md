@@ -48,6 +48,10 @@ Management Account (org root)
     └── Dev Account (us-east-2)
         GuardDuty member · Config recorder · Inspector
         EventBridge → central bus · dev workloads
+
+> **Note:** AWS resources were deprovisioned after project completion to avoid ongoing costs. 
+> The console-walkthrough.md documents the full setup process and can be used to reproduce 
+> the environment.
 ```
 
 The security account has no workloads of its own. It exists purely as a
