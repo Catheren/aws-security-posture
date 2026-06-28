@@ -53,7 +53,7 @@ before production use.
 Same as above — accepted for this environment, required for production.
 Log file validation detects tampering with CloudTrail logs after the fact,
 which is relevant when CloudTrail itself is a forensic source during an
-incident.
+incident..
 
 ---
 
