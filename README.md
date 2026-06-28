@@ -1,4 +1,10 @@
 # AWS Cloud Security Posture
+[![AWS](https://img.shields.io/badge/AWS-Multi--Account-FF9900?logo=amazon-aws&logoColor=white)](https://aws.amazon.com/)
+[![GuardDuty](https://img.shields.io/badge/GuardDuty-Threat_Detection-red)](https://aws.amazon.com/guardduty/)
+[![Security Hub](https://img.shields.io/badge/Security_Hub-CSPM-blue)](https://aws.amazon.com/security-hub/)
+[![AWS Config](https://img.shields.io/badge/AWS_Config-Compliance-orange)](https://aws.amazon.com/config/)
+[![Inspector](https://img.shields.io/badge/Inspector-Vulnerability_Scanning-yellow)](https://aws.amazon.com/inspector/)
+[![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 
 A hands-on multi-account AWS security project demonstrating the architecture,
 tooling, and judgment.
@@ -9,6 +15,19 @@ it, and what to defer — reflects how a small-to-medium company would
 realistically operate this stack, not a checklist of every available toggle.
 
 ---
+## What this demonstrates
+
+| Skill | Implementation |
+|---|---|
+| Multi-account AWS security architecture | 4-account pattern with delegated admin via AWS Organizations |
+| Threat detection | GuardDuty enabled org-wide with centralized findings |
+| Cloud security posture management | Security Hub CSPM with CIS AWS Foundations Benchmark v5.0.0 |
+| Configuration compliance | AWS Config with custom Lambda rule + 2 managed rules |
+| Vulnerability management | Amazon Inspector across EC2 and ECR in all accounts |
+| Cross-account event pipeline | EventBridge forwarding all CloudTrail events to central security bus |
+| SIEM-ready architecture | S3 landing zone via Kinesis Firehose for vendor-agnostic ingestion |
+| Incident response | IR playbooks for credential compromise, public S3, suspicious IAM |
+| Detection gap analysis | Coverage map documenting native vs custom detection decisions |
 
 ## Architecture
 
@@ -48,8 +67,7 @@ aws-cloud-security-engineering/
     cis-benchmark-mapping.md    CIS findings triage notes
   lambda/
     no_wildcard_iam.py          Custom Config rule evaluation logic
-  optional-iac-reference/       Terraform equivalent of console setup
-  playbooks/                    IR playbooks (credential compromise,
+   playbooks/                    IR playbooks (credential compromise,
                                 public S3, suspicious IAM activity)
 ```
 
@@ -250,5 +268,6 @@ the cost is negligible and the coverage is worth it.
 ## Prerequisites
 
 - AWS account with Organizations set up (management + member accounts)
-- AWS CLI v2, Terraform >= 1.5, Python 3.12
+- AWS CLI v2, Python 3.12
 - Admin access in each account for initial setup
+See `console-walkthrough.md` for the full step-by-step setup guide.
