@@ -29,7 +29,7 @@ which watches CloudTrail API calls and flags anomalous patterns:
 These findings flow through the central EventBridge bus to SNS, triggering
 an alert. This playbook describes what happens after that alert fires.
 
-## What "compromised credential" actually means
+## What "compromised credential" actually means.
 
 A credential is considered compromised when there is reasonable evidence it
 is being used by an unauthorized party. This includes:
